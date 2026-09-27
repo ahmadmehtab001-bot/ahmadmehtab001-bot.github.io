@@ -100,25 +100,24 @@ footer{background:#022c27;color:#d9e6e2;padding:45px 6%;text-align:center}.foote
 <textarea id="message" placeholder="Places you want to visit / interests / questions"></textarea>
 <button class="btn gold full" type="submit">Send Request on WhatsApp</button>
 </form>
-<div class="notice">Before publishing, replace <strong>WHATSAPP_NUMBER</strong> in this website with your real WhatsApp number in international format.</div>
+<div class="notice"><strong>WhatsApp is connected.</strong> Tap the button above to send your tour request directly to The Chitral Guide.</div>
 </div>
 </section>
 
 <section>
 <div class="head"><h2>Contact The Chitral Guide</h2><p>Use the channels below for direct inquiries and bookings.</p></div>
 <div class="contact">
-<div class="contactCard"><h3>📱 WhatsApp</h3><p>For tour planning, availability and booking inquiries.</p><a href="#booking">Open booking form →</a></div>
+<div class="contactCard"><h3>📱 WhatsApp</h3><p>For tour planning, availability and booking inquiries.</p><a href="https://wa.me/923075142110?text=Hello%20The%20Chitral%20Guide!%20I%20want%20to%20ask%20about%20a%20tour." target="_blank" rel="noopener">Chat on WhatsApp →</a></div>
 <div class="contactCard"><h3>📲 Social Media</h3><p>Follow the journey, new destinations and travel ideas.</p><a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">TikTok</a></div>
 </div>
 </section>
 
-<footer><div class="footerBrand">THE CHITRAL GUIDE</div><div>Explore Chitral. Live the Journey.</div><div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">WhatsApp</a></div><div>Chitral, Khyber Pakhtunkhwa, Pakistan</div></footer>
+<footer><div class="footerBrand">THE CHITRAL GUIDE</div><div>Explore Chitral. Live the Journey.</div><div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a><a href="https://wa.me/923075142110" target="_blank" rel="noopener">WhatsApp</a></div><div>Chitral, Khyber Pakhtunkhwa, Pakistan</div></footer>
 
 <script>
-const WHATSAPP_NUMBER="WHATSAPP_NUMBER";
+const WHATSAPP_NUMBER="923075142110";
 document.getElementById("tripForm").addEventListener("submit",function(e){
  e.preventDefault();
- if(WHATSAPP_NUMBER==="WHATSAPP_NUMBER"){alert("Website setup complete. Add your real WhatsApp number in the code before publishing.");return;}
  const v=id=>document.getElementById(id).value;
  const msg=`Hello The Chitral Guide!%0A%0AName: ${encodeURIComponent(v("name"))}%0AContact: ${encodeURIComponent(v("contact"))}%0ATravel date: ${encodeURIComponent(v("date"))}%0ATravellers: ${encodeURIComponent(v("travellers"))}%0ATrip: ${encodeURIComponent(v("trip"))}%0ADays: ${encodeURIComponent(v("days"))}%0ARequest: ${encodeURIComponent(v("message"))}`;
  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`,"_blank");
